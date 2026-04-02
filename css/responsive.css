@@ -1,10 +1,9 @@
-
 @media (max-width: 991px) {
     .navbar-custom {
         padding: 10px 25px;
         margin-top: 15px;
     }
-    
+
     .nav-links {
         position: fixed;
         right: -100%;
@@ -18,7 +17,7 @@
         gap: 30px;
         transition: 0.5s;
         z-index: 1000;
-        box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
     }
 
     .nav-links.active {
@@ -32,9 +31,11 @@
     .hamburger.active span:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
     }
+
     .hamburger.active span:nth-child(2) {
         opacity: 0;
     }
+
     .hamburger.active span:nth-child(3) {
         transform: rotate(-45deg) translate(2px, -3px);
     }
@@ -43,7 +44,7 @@
         font-size: 32px;
         text-align: center;
     }
-    
+
     .about-desc {
         text-align: center;
         max-width: 100%;
@@ -79,12 +80,12 @@
         padding: 25px;
         border-radius: 20px;
     }
-    
+
     .testi-text {
         font-size: 14px;
         margin-bottom: 20px;
     }
-    
+
     .stars-green {
         font-size: 15px;
         margin-bottom: 15px;
@@ -131,8 +132,8 @@
         border-left-width: 25px;
         border-top-width: 15px;
         border-bottom-width: 15px;
-        margin-left: 20px;
-        margin-top: -15px;
+        margin-left: 8px;
+        margin-top: -2px;
     }
 
     .play-btn-large.playing .play-triangle {
@@ -144,5 +145,3 @@
         margin-top: -20px;
     }
 }
-
-
