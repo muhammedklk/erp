@@ -65,7 +65,8 @@ img {
 .text-center {
     text-align: center;
 }
-.logo{
+
+.logo {
     line-height: 0;
 }
 
@@ -477,7 +478,7 @@ img {
 .img-stack {
     background: #fff;
     border-radius: 20px;
-    box-shadow: 0 40px 80px rgba(0,0,0,0.08);
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.08);
     transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
@@ -505,7 +506,7 @@ img {
 
 .img-stack:hover {
     transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 50px 100px rgba(0,0,0,0.12);
+    box-shadow: 0 50px 100px rgba(0, 0, 0, 0.12);
 }
 
 .video-section {
@@ -538,9 +539,10 @@ img {
     position: relative;
     width: 100%;
     border-radius: 30px;
-    overflow: visible; /* To allow the play button to overlap fully and shadow to bleed */
+    overflow: visible;
+    /* To allow the play button to overlap fully and shadow to bleed */
     background: #000;
-    box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
 }
 
 .experience-video {
@@ -553,10 +555,10 @@ img {
 
 .play-btn-large {
     position: absolute;
-    bottom: -40px;
-    left: -40px;
-    width: 140px;
-    height: 140px;
+    bottom: -30px;
+    left: -30px;
+    width: 80px;
+    height: 80px;
     background-color: var(--primary-green);
     border-radius: 50%;
     display: flex;
@@ -581,9 +583,20 @@ img {
 }
 
 @keyframes pulse-green {
-    0% { transform: scale(1); opacity: 0.6; }
-    70% { transform: scale(1.4); opacity: 0; }
-    100% { transform: scale(1); opacity: 0; }
+    0% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+
+    70% {
+        transform: scale(1.4);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
 }
 
 .play-btn-large:hover {
