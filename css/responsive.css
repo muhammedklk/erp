@@ -61,7 +61,58 @@
         min-height: 300px;
         margin-top: 50px;
     }
+
+    /* Video Section Tablet */
+    .video-section .main-div {
+        padding: 0 20px;
+    }
+
+    .video-section .section-title {
+        font-size: 32px !important;
+        margin-bottom: 20px;
+    }
+
+    .video-section .section-desc {
+        font-size: 18px !important;
+        margin-bottom: 30px;
+        max-width: 100%;
+    }
+
+    /* Pricing Section Tablet */
+    .pricing-card {
+        padding: 40px 25px;
+        min-height: auto;
+    }
+
+    .plan-title {
+        font-size: 26px;
+        margin-bottom: 15px;
+    }
+
+    .plan-desc {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 25px;
+    }
+
+    .plan-price {
+        font-size: 38px;
+        margin-bottom: 25px;
+    }
+
+    .plan-features li {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .popular-badge {
+        font-size: 11px;
+        padding: 6px 15px;
+        top: -15px;
+    }
 }
+
+
 
 
 
