@@ -407,9 +407,20 @@ img {
     animation: drift-slow 20s infinite linear alternate;
 }
 
-.i-1 { top: 15%; left: 10%; }
-.i-2 { top: 60%; left: 15%; }
-.i-3 { top: 25%; right: 8%; }
+.i-1 {
+    top: 15%;
+    left: 10%;
+}
+
+.i-2 {
+    top: 60%;
+    left: 15%;
+}
+
+.i-3 {
+    top: 25%;
+    right: 8%;
+}
 
 /* Connectivity Mesh */
 .mesh-box {
@@ -425,8 +436,17 @@ img {
 }
 
 @keyframes node-pulse {
-    0%, 100% { opacity: 0.3; transform: scale(1); }
-    50% { opacity: 1; transform: scale(1.5); }
+
+    0%,
+    100% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.5);
+    }
 }
 
 .m-1 {
@@ -434,23 +454,37 @@ img {
     right: 5%;
 }
 
-.p-1, .p-3 {
+.p-1,
+.p-3 {
     animation: float-slow 15s infinite ease-in-out;
 }
 
 
-.p-2, .p-4 {
+.p-2,
+.p-4 {
     animation: float-slow 20s infinite ease-in-out reverse;
 }
 
 @keyframes float-slow {
-    0%, 100% { transform: translate(0, 0); }
-    50% { transform: translate(30px, -40px); }
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(30px, -40px);
+    }
 }
 
 @keyframes drift-slow {
-    0% { transform: translate(0, 0) rotate(0deg); }
-    100% { transform: translate(-50px, 40px) rotate(10deg); }
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50px, 40px) rotate(10deg);
+    }
 }
 
 .top-pill {
@@ -799,6 +833,7 @@ img {
 
 .features-section {
     padding: var(--section-py) 0;
+    padding-bottom: 0;
 }
 
 .feature-card {
@@ -811,7 +846,7 @@ img {
 }
 
 .video-placeholder-container {
-    box-shadow: 0 40px 100px rgba(0,0,0,0.1);
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.1);
 }
 
 /* FAQ Section */
@@ -1006,7 +1041,8 @@ img {
     align-items: center;
     gap: 10px;
     margin-bottom: 5px;
-    height: 25px; /* Prevent layout jump */
+    height: 25px;
+    /* Prevent layout jump */
 }
 
 .original-price {
@@ -1435,7 +1471,6 @@ img {
     background-color: #000;
     color: #fff;
     padding: 100px 0 40px;
-    margin-top: 80px;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
 }
