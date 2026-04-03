@@ -113,6 +113,17 @@ document.addEventListener('DOMContentLoaded', function() {
                     });
                 });
 
+                const metaItems = document.querySelectorAll('.original-price, .discount-badge');
+                metaItems.forEach(item => {
+                    const val = item.getAttribute(`data-${type}`);
+                    item.textContent = val;
+                    if (val) {
+                        gsap.to(item, { opacity: 1, scale: 1, duration: 0.3 });
+                    } else {
+                        gsap.to(item, { opacity: 0, scale: 0.8, duration: 0.3 });
+                    }
+                });
+
                 perUnits.forEach(unit => {
                     unit.textContent = type === 'monthly' ? '/month' : '/year';
                 });
@@ -120,10 +131,53 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // FAQ Toggle Logic
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        question.addEventListener('click', () => {
+            // Close other items
+            faqItems.forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.classList.remove('active');
+                }
+            });
+            // Toggle current item
+            item.classList.toggle('active');
+        });
+    });
+
+
     
-    // 1. Hero Reveal (Page Load)
-    const heroTimeline = gsap.timeline();
-    heroTimeline.from('.top-pill, .hero-title, .hero-subtext, .hero-cta, .hero-image-box', {
+    // Hero reveal timeline
+    const heroTl = gsap.timeline({ defaults: { ease: "power4.out", duration: 1.2 } });
+
+    // Parallax logic
+    const heroSection = document.querySelector('.hero-section');
+    const parallaxItems = document.querySelectorAll('.parallax-item');
+
+    if (heroSection) {
+        heroSection.addEventListener('mousemove', (e) => {
+            const { clientX, clientY } = e;
+            const centerX = window.innerWidth / 2;
+            const centerY = window.innerHeight / 2;
+
+            parallaxItems.forEach(item => {
+                const speed = parseFloat(item.getAttribute('data-speed'));
+                const x = (clientX - centerX) * speed;
+                const y = (clientY - centerY) * speed;
+
+                gsap.to(item, {
+                    x: x,
+                    y: y,
+                    duration: 1,
+                    ease: "power2.out"
+                });
+            });
+        });
+    }
+
+    heroTl.from('.top-pill, .hero-title, .hero-subtext, .hero-cta, .hero-image-box', {
         duration: 1.2,
         y: 60,
         opacity: 0,
