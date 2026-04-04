@@ -34,7 +34,6 @@ document.addEventListener('DOMContentLoaded', function() {
             navLinks.classList.toggle('active');
         });
 
-        // Close menu on link click
         navLinksItems.forEach(item => {
             item.addEventListener('click', () => {
                 hamburger.classList.remove('active');
@@ -131,28 +130,23 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // FAQ Toggle Logic
     const faqItems = document.querySelectorAll('.faq-item');
     faqItems.forEach(item => {
         const question = item.querySelector('.faq-question');
         question.addEventListener('click', () => {
-            // Close other items
             faqItems.forEach(otherItem => {
                 if (otherItem !== item) {
                     otherItem.classList.remove('active');
                 }
             });
-            // Toggle current item
             item.classList.toggle('active');
         });
     });
 
 
     
-    // Hero reveal timeline
     const heroTl = gsap.timeline({ defaults: { ease: "power4.out", duration: 1.2 } });
 
-    // Parallax logic
     const heroSection = document.querySelector('.hero-section');
     const parallaxItems = document.querySelectorAll('.parallax-item');
 
@@ -185,7 +179,6 @@ document.addEventListener('DOMContentLoaded', function() {
         ease: "power4.out",
         delay: 0.2,
         onComplete: () => {
-            // 3. Continuous Floating Animation for Hero Dashboard
             gsap.to('.hero-image-box', {
                 y: -15,
                 duration: 3,
@@ -196,7 +189,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // 2. Section Headings Reveal (ScrollTrigger)
     const sections = document.querySelectorAll('section');
     sections.forEach(section => {
         const elementsToReveal = section.querySelectorAll('h2, .section-desc, .section-title-center');
@@ -217,7 +209,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // 3. Why Choose Cards Reveal (Staggered)
     gsap.from('.feature-card', {
         scrollTrigger: {
             trigger: '.features-section',
@@ -229,10 +220,9 @@ document.addEventListener('DOMContentLoaded', function() {
         opacity: 0,
         stagger: 0.15,
         ease: "power2.out",
-        clearProps: "all" // Clear GSAP props after animation to prevent layout issues
+        clearProps: "all" 
     });
 
-    // 4. Pricing Cards Reveal (Staggered)
     gsap.from('.pricing-card', {
         scrollTrigger: {
             trigger: '.pricing-section',
@@ -247,22 +237,20 @@ document.addEventListener('DOMContentLoaded', function() {
         clearProps: "all"
     });
 
-    // GSAP Service Stacking Animation
     if (typeof gsap !== 'undefined') {
         gsap.registerPlugin(ScrollTrigger);
 
         const cards = gsap.utils.toArray('.service-card');
         
         cards.forEach((card, i) => {
-            if (i < cards.length - 1) { // Apply to all but the last card
+            if (i < cards.length - 1) {
                 gsap.to(card, {
-                    scale: 0.92, // Subtle scale down
+                    scale: 0.92,
                     scrollTrigger: {
-                        trigger: cards[i + 1], // Trigger when next card starts overlapping
-                        start: "top 70%", // When next card is near
-                        end: "top 120px", // Ending pinpoint
+                        trigger: cards[i + 1],
+                        start: "top 70%",
+                        end: "top 120px",
                         scrub: true,
-                        // markers: true,
                     }
                 });
             }

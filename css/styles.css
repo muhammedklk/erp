@@ -369,7 +369,6 @@ img {
     width: 300px;
     height: 300px;
     background: rgba(15, 124, 22, 0.05);
-    /* Very light BizDot green */
     top: 50px;
     left: -50px;
 }
@@ -398,7 +397,6 @@ img {
     left: 20%;
 }
 
-/* SaaS Ghost Icons */
 .icon-box {
     filter: none;
     color: var(--primary-green);
@@ -422,7 +420,6 @@ img {
     right: 8%;
 }
 
-/* Connectivity Mesh */
 .mesh-box {
     filter: none;
     color: var(--primary-green);
@@ -577,7 +574,6 @@ img {
     max-width: 450px;
 }
 
-/* Learn More Pill Button */
 .btn-outline-pill {
     display: inline-flex;
     align-items: center;
@@ -604,7 +600,6 @@ img {
     transform: translateX(5px);
 }
 
-/* About Image Stack System */
 .about-image-stack {
     position: relative;
     width: 100%;
@@ -679,7 +674,6 @@ img {
     width: 100%;
     border-radius: 30px;
     overflow: visible;
-    /* To allow the play button to overlap fully and shadow to bleed */
     background: #000;
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
 }
@@ -849,7 +843,6 @@ img {
     box-shadow: 0 40px 100px rgba(0, 0, 0, 0.1);
 }
 
-/* FAQ Section */
 .faq-section {
     padding: 100px 0;
     background-color: #fff;
@@ -1042,7 +1035,6 @@ img {
     gap: 10px;
     margin-bottom: 5px;
     height: 25px;
-    /* Prevent layout jump */
 }
 
 .original-price {
@@ -1465,7 +1457,6 @@ img {
 
 
 
-/* Footer */
 
 .footer-section {
     background-color: #000;
